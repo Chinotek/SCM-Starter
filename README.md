@@ -42,7 +42,7 @@ This repo is a fork of [SCM-Starter](https://github.com/MetacrafterChris/SCM-Sta
   
   `Chain ID`: 31337
   
-  `Currency symbol`: ETH or GO
+  `Currency symbol`: ETH
 
 > [!IMPORTANT]
 > Make sure the imported account is selected in the Metamask extension when pressing the connect wallet button on the webstie
