@@ -3,7 +3,7 @@
 This repo is a fork of [SCM-Starter](https://github.com/MetacrafterChris/SCM-Starter) from MetaCrafters
 
 ## Mechanics
--A user and the dealer will role a die and whoever scores a higher number wins. Winning doubles the balance while losing halfs the balance.
+- A user and the dealer will role a die and whoever scores a higher number wins. Winning doubles the balance while losing halfs the balance.
 - Staring Balance: 10 ETH
 - Can only deposit 10 ETH at a time
 
