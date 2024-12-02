@@ -1,12 +1,54 @@
-# Starter Next/Hardhat Project
+# Dice Game Next/Hardhat Project
 
-After cloning the github, you will want to do the following to get the code running on your computer.
+This repo is a fork of [SCM-Starter](https://github.com/MetacrafterChris/SCM-Starter) from MetaCrafters
 
-1. Inside the project directory, in the terminal type: npm i
-2. Open two additional terminals in your VS code
-3. In the second terminal type: npx hardhat node
-4. In the third terminal, type: npx hardhat run --network localhost scripts/deploy.js
-5. Back in the first terminal, type npm run dev to launch the front-end.
+## Mechanics
+-A user and the dealer will role a die and whoever scores a higher number wins. Winning doubles the balance while losing halfs the balance.
+- Staring Balance: 10 ETH
+- Can only deposit 10 ETH at a time
 
-After this, the project will be running on your localhost. 
-Typically at http://localhost:3000/
+## Setup
+1. Install dependencies with
+  ```bash
+  npm i
+  ```
+2. Start a hardhat node on another terminal
+  ```bash
+  npx hardhat node
+  ```
+> [!NOTE]
+> Keep in mind the `address` that displays and the `private key` of `Account #0` when it is run, those will be used to setup Metamask
+
+> Started HTTP and WebSocket JSON-RPC server at `http://127.0.0.1:8545/`
+    
+> Private Key: `0x********************`
+
+3. Deploy the contract on another terminal
+  ```bash
+  npx hardhat run --network localhost scripts/deploy.js
+  ```
+4. Start the website at http://localhost:3000
+  ```bash
+  npm run dev
+  ```
+5. Install Metamask wallet and setup an account
+- Add a new account by importing one using the private key of `Account #0`
+> [!NOTE]
+> you may need to setup an initial new account first before you can import a new one
+6. Add a network manually in Metamask
+- On the settings page of the metamask extension, add a network manually and fill up the following fields
+
+  `Network name`: (any)
+  
+  `New RPC URL`: http://127.0.0.1:8545/
+  
+  `Chain ID`: 31337
+  
+  `Currency symbol`: ETH or GO
+
+> [!IMPORTANT]
+> Make sure the imported account is selected in the Metamask extension when pressing the connect wallet button on the webstie
+
+> [!TIP]
+> When getting a nonce error or an error when connecting the wallet or performing a transaction, try clearing the activity tab data in the metamask extension and refresh the website page,
+> Metamask Extension > three dots on the top right > Settings > Advanced > Clear activity tab data
