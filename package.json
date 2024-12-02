@@ -2,10 +2,14 @@
   "name": "hardhat-project",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.0",
-    "hardhat": "^2.12.4"
+    "autoprefixer": "^10.4.20",
+    "hardhat": "^2.12.4",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15"
   },
   "dependencies": {
     "@metamask/providers": "^10.2.1",
+    "hardhat-project": "file:",
     "next": "^13.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -14,6 +18,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:css": "tailwindcss -i ./pages/styles.css -o ./public/output.css --watch"
   }
 }
